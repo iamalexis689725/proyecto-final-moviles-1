@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="8dp">
+
+
+    <TextView
+        android:id="@+id/lblNombreRestaurante"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pollo Cris"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Pollo Cris" />
+
+    <TextView
+        android:id="@+id/lblNombreRestauranteProducto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="1/4 pollo"
+        android:textColor="@color/gray"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblNombreRestaurante"
+        tools:text="1/4 pollo" />
+
+    <TextView
+        android:id="@+id/lblCantidadCarritoProducto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="10dp"
+        android:text="1"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/btnDisminuir"
+        app:layout_constraintTop_toBottomOf="@+id/lblNombreRestauranteProducto"
+        tools:text="1" />
+
+    <TextView
+        android:id="@+id/lblPrecioProductoCarrito"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:text="12 bs"
+        android:textColor="@android:color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/lblNombreRestaurante"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="12 bs" />
+
+    <Button
+        android:id="@+id/btnAumentar"
+        android:layout_width="30dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="#8BC34A"
+        android:text="+"
+        app:layout_constraintStart_toEndOf="@+id/lblCantidadCarritoProducto"
+        app:layout_constraintTop_toBottomOf="@+id/lblNombreRestauranteProducto" />
+
+    <Button
+        android:id="@+id/btnDisminuir"
+        android:layout_width="30dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="#FF0000"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblNombreRestauranteProducto" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabBorrarProducto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:clickable="true"
+        app:layout_constraintStart_toEndOf="@+id/lblPrecioProductoCarrito"
+        app:srcCompat="@android:drawable/ic_menu_delete"
+        tools:layout_editor_absoluteY="16dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
