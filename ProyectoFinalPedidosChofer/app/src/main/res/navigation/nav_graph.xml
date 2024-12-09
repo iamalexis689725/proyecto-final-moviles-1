@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/iniciarSesionFragment">
+
+    <fragment
+        android:id="@+id/listaPedidosFreeFragment"
+        android:name="com.example.appmovilespedidosyachofer.ui.fragments.ListaPedidosFreeFragment"
+        android:label="fragment_lista_pedidos_free"
+        tools:layout="@layout/fragment_lista_pedidos_free" >
+        <action
+            android:id="@+id/action_listaPedidosFreeFragment_to_ubicacionRestauranteFragment"
+            app:destination="@id/ubicacionRestauranteFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/iniciarSesionFragment"
+        android:name="com.example.appmovilespedidosyachofer.ui.fragments.IniciarSesionFragment"
+        android:label="fragment_iniciar_sesion"
+        tools:layout="@layout/fragment_iniciar_sesion" >
+        <action
+            android:id="@+id/action_iniciarSesionFragment_to_listaPedidosFreeFragment"
+            app:destination="@id/listaPedidosFreeFragment" />
+        <action
+            android:id="@+id/action_iniciarSesionFragment_to_registroFragment"
+            app:destination="@id/registroFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/registroFragment"
+        android:name="com.example.appmovilespedidosyachofer.ui.fragments.RegistroFragment"
+        android:label="fragment_registro"
+        tools:layout="@layout/fragment_registro" >
+        <action
+            android:id="@+id/action_registroFragment_to_iniciarSesionFragment"
+            app:destination="@id/iniciarSesionFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/ubicacionRestauranteFragment"
+        android:name="com.example.appmovilespedidosyachofer.ui.fragments.UbicacionRestauranteFragment"
+        android:label="fragment_ubicacion_restaurante"
+        tools:layout="@layout/fragment_ubicacion_restaurante">
+        <argument
+            android:name="restauranteId"
+            app:argType="integer" />
+    </fragment>
+
+</navigation>
